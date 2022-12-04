@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Jenny",
+        "encouragement": "You are amazing! And don't you forget it!",
+        "likes": 7
+    },
+    {
+        "id": 2,
+        "name": "Patty",
+        "encouragement": "Follow your passions!",
+        "likes": 9
+    },
+    {
+        "id": 3,
+        "name": "Ron",
+        "encouragement": "I love the cut of your gib!",
+        "likes": 5
+    }
+]
