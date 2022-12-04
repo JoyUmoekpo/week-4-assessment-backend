@@ -54,11 +54,12 @@ const complimentDisplay = (results) => {
     let cards = ``;
     for (let i = 0; i < results.length; i++) {
         cards += `
-            <div class = "card">
+            <div class = "card" id="center">
 
-                <h1>Here are all compliments!</h1>
+                <br />
 
-                <h3 id = "complimentId">Compliment Id: ${results[i].id}</h3>            
+                <h2>Here is compliment #${results[i].id}!</h2>
+
                 <h3 id = "name">Name: ${results[i].name}</h3>
                 <h3 id = "encouragement">Encouragement: ${results[i].encouragement}</h3>
                 <h3 id = "likes">Likes: ${results[i].likes}</h3>
@@ -69,7 +70,8 @@ const complimentDisplay = (results) => {
                 <button onclick="updateCompliment(${results[i].id}, 'minus')" id="likes" type="minus">-</button>
 
                 <button onclick="deleteCompliment('${results[i].id}')">Delete Compliment</button>
-                <p>------------------------------------------------------------------------</p>
+                <p>------------------------------------------------------------------</p>
+
             </div>
         `;
     }
@@ -119,3 +121,6 @@ const submitHandler = (event) => {
     encouragement.value = ''
     likes.value = ''
 }
+
+
+
