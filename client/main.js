@@ -106,21 +106,23 @@ const submitHandler = (event) => {
     event.preventDefault()
 
     let name = document.querySelector('#firstName')
-    let encouragement = document.querySelector('#encouragement')
-    let likes = document.querySelector('.likes')
+    let userCompliment = document.querySelector('#userCompliment')
+    // let likes = document.querySelector('.likes')
 
     let newCompliment = {
         name: name.value,
-        encouragement: encouragement.value,
-        likes: likes.value
+        userCompliment: encouragement.value,
+        likes: 5
     }
 
     postNewCompliment(newCompliment);
 
     name.value = ''
-    encouragement.value = ''
-    likes.value = ''
+    userCompliment.value = ''
+    likes.value = 5
 }
+
+form.addEventListener('submit', submitHandler)
 
 
 
