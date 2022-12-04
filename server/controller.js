@@ -1,4 +1,4 @@
-const classmateCompliments = require('./db.json');
+const classmateCompliments = require('./db.json'); 
 let globalId = 4;
 
 module.exports = {
