@@ -127,3 +127,11 @@ form.addEventListener('submit', submitHandler)
 
 
 
+const updateCompliment = (id, type) => {
+    axios.put(`http://localhost:4000/api/compliments/classmates/${id}`, {type})
+        .then(res => {
+            const data = res.data;
+            complimentDisplay(data)
+        })
+        .catch(err => console.log(err))
+};
