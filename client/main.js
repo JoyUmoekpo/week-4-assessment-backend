@@ -94,7 +94,7 @@ const newComplimentBtn = document.createElement("newComplimentButton");
 const form = document.querySelector('form');
 
 const postNewCompliment = (body) => {
-    axios.post(`http://localhost:4000/api/compliments/classmates`, body)
+    axios.post(`http://localhost:4000/api/compliments/classmates/`, body)
         .then(res => {
             const data = res.data;
             complimentDisplay(data)
