@@ -1,4 +1,5 @@
 const classmateCompliments = require('./db.json');
+let globalId = 4;
 
 module.exports = {
 
@@ -36,5 +37,25 @@ module.exports = {
 
         classmateCompliments.splice(complimentIndex, 1);
         res.status(200).send(classmateCompliments);
+    },
+
+    postNewCompliment: (req, res) => {
+        let {
+            name,
+            userCompliment,
+            // likes
+        } = req.body;
+
+        let newCompliment = {
+            id: globalId,
+            name,
+            userCompliment,
+            // likes
+        }
+
+        classmateCompliments.push(newCompliment);
+
+        res.status(200).send(classmateCompliments);
+        globalId++;
     }
 }
