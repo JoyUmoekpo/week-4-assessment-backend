@@ -1,3 +1,5 @@
+const classmateCompliments = require('./db.json');
+
 module.exports = {
 
     getCompliment: (req, res) => {
