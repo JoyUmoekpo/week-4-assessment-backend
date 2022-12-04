@@ -57,5 +57,33 @@ module.exports = {
 
         res.status(200).send(classmateCompliments);
         globalId++;
+    },
+
+    updateCompliment: (req, res) => {
+        let {
+            complimentId: id
+        } = req.params;
+
+        let {
+            type
+        } = req.body;
+
+        let complimentIndex = classmateCompliments.findIndex(compliment => compliment.id === +id);
+
+        let compliment = classmateCompliments[complimentIndex];
+
+        if (compliment.likes >= 10 && type === 'plus') {
+            res.status(400).send('Cannot go above 10');
+        } else if (compliment.likes === 0 && type === 'minus') {
+            res.status(400).send('Cannot go below 0');
+        } else if (type === 'plus'){
+            compliment.likes++;
+            res.status(200).send(classmateCompliments);
+        } else if (type === 'minus'){
+            compliment.likes--;
+            res.status(200).send(classmateCompliments);
+        } else {
+            res.status(400);
+        }        
     }
 }
