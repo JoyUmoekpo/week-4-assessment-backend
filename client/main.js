@@ -33,3 +33,19 @@ const clearDisplay = () => {
 };
 
 clearBtn.addEventListener('click', clearDisplay);
+
+
+
+const classComplimentsBtn = document.getElementById("classComplimentButton");
+const complimentContainer = document.getElementById("complimentContainer");
+
+const getClassCompliments = () => {
+    axios.get("http://localhost:4000/api/compliments/classmates")
+        .then(res => {
+            const data = res.data;
+            complimentDisplay(data)
+        })
+        .catch(err => console.log(err))
+};
+
+classComplimentsBtn.addEventListener('click', getClassCompliments);
