@@ -5,13 +5,18 @@
 
     <style>
       * {
-        background-color: #00a36c;
+        background-color: #181818;
+        color: #6c00a3;
+        font-size: 15px;
+      }
+
+      body {
+        padding: 50px;
       }
 
       button {
         background-color: #909;
         color: #fff;
-        font-size: medium;
       }
 
       button:hover {
@@ -24,6 +29,10 @@
 
       #center {
         text-align: center;
+      }
+
+      p {
+        font-weight: bolder;
       }
     </style>
   </head>
@@ -42,11 +51,11 @@
     <section id="complimentContainer"></section>
 
     <section>
-      <h2>
+      <p>
         Feature 1: Get Method (Press the 'Get compliments' button to populate
         database compliments. They will populate above. Press 'Clear
         compliments' button to test other features when done.)
-      </h2>
+      </p>
 
       <section id="center">
         <button id="classComplimentButton">Get compliments</button>
@@ -58,12 +67,12 @@
     </p>
 
     <section>
-      <h2>
+      <p>
         Feature 2: Delete Method (Press the 'Get compliments' button and delete
         a compliment with 'Delete Compliment' button after compliments populate.
         Then, press 'Clear compliments' button to test other features when
         done.)
-      </h2>
+      </p>
     </section>
 
     <p id="center">
@@ -71,14 +80,14 @@
     </p>
 
     <section>
-      <h2>
+      <p>
         Feature 3: Post Method (Enter your first name (or any name you desire)
         and a compliment method to add the current list of compliments. Your
-        name and compliment will be posted to the DOM.)
-      </h2>
+        name and compliment will be posted to the DOM. Then, press 'Clear
+        compliments' button to test other features when done.)
+      </p>
 
       <form id="center">
-        
         <input
           type="text"
           name="firstName"
@@ -93,7 +102,7 @@
           id="userCompliment"
         />
 
-        <label for="userLikes" id="userLikes">Choose # of likes</label>
+        <label for="userLikes" id="userLikes">Choose # of likes:</label>
 
         <select name="userLikes" id="userLikes">
           <option value="1">1</option>
@@ -106,7 +115,6 @@
           <option value="8">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
-
         </select>
 
         <button id="newComplimentButton">Submit compliment</button>
@@ -117,7 +125,20 @@
       ---------------------------------------------------------------------------------------
     </p>
 
-    <section></section>
+    <section>
+      <p>
+        Feature 4: Put Method (Press the 'Get compliments' button to populate
+        the database compliments. They will populate above. Change the number of
+        likes on a compliment with the plus and minus buttons after compliments
+        populate. Then, press 'Clear compliments' button to test other features
+        when done.)
+      </p>
+    </section>
+
+    <p id="center">
+      ---------------------------------------------------------------------------------------
+    </p>
+
     <section></section>
     <section></section>
 
