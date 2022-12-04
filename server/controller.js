@@ -26,4 +26,15 @@ module.exports = {
     getClassCompliments: (req, res) => {
         res.status(200).send(classmateCompliments);
     },
+
+    deleteCompliment: (req, res) => {
+        let {
+            complimentId: id
+        } = req.params;
+        
+        let complimentIndex = classmateCompliments.findIndex(compliment => compliment.id === +id);
+
+        classmateCompliments.splice(complimentIndex, 1);
+        res.status(200).send(classmateCompliments);
+    }
 }
