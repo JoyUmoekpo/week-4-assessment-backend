@@ -49,3 +49,27 @@ const getClassCompliments = () => {
 };
 
 classComplimentsBtn.addEventListener('click', getClassCompliments);
+
+const complimentDisplay = (results) => {
+    let cards = ``;
+    for (let i = 0; i < results.length; i++) {
+        cards += `
+            <div class = "card">
+                <p id = "complimentId">Compliment Id: ${results[i].id}</p>            
+                <p id = "name">Name: ${results[i].name}</p>
+                <p id = "encouragement">Encouragement: ${results[i].encouragement}</p>
+                <p id = "likes">Likes: ${results[i].likes}</p>
+
+                <h3>Update likes with the plus and minus below</h3>
+
+                <button onclick="updateCompliment(${results[i].id}, 'plus')" id="likes" type="plus">+</button>
+
+                <button onclick="updateCompliment(${results[i].id}, 'minus')" id="likes" type="minus">-</button>
+
+                <button onclick="deleteCompliment('${results[i].id}')">Delete Compliment</button>
+                <p>------------------------------------------------------------------------</p>
+            </div>
+        `;
+    }
+    complimentContainer.innerHTML = cards;
+};
