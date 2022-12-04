@@ -23,3 +23,7 @@ const getFortune = () => {
 };
 
 fortuneBtn.addEventListener('click', getFortune);
+
+
+
+const clearBtn = document.getElementById("clear");
