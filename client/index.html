@@ -11,7 +11,7 @@
       }
 
       body {
-        padding: 50px;
+        padding: 5px;
       }
 
       button {
@@ -34,6 +34,11 @@
       p {
         font-weight: bolder;
       }
+
+      #featureSection {
+        padding: 15px;
+      }
+
     </style>
   </head>
 
@@ -46,101 +51,100 @@
       <button id="clear">Clear compliments</button>
     </section>
 
-    <h1 id="center">Try out my Features!</h1>
-
     <section id="complimentContainer"></section>
 
-    <section>
-      <p>
-        Feature 1: Get Method (Press the 'Get compliments' button to populate
-        database compliments. They will populate above. Press 'Clear
-        compliments' button to test other features when done.)
-      </p>
+    <section id="featureSection">
+      <h1 id="center">Try out my Features!</h1>
 
-      <section id="center">
-        <button id="classComplimentButton">Get compliments</button>
+      <section>
+        <p>
+          Feature 1: Get Method (Press the 'Get compliments' button to populate
+          database compliments. They will populate above. Press 'Clear
+          compliments' button to test other features when done.)
+        </p>
+  
+        <section id="center">
+          <button id="classComplimentButton">Get compliments</button>
+        </section>
       </section>
-    </section>
-
-    <p id="center">
-      ---------------------------------------------------------------------------------------
-    </p>
-
-    <section>
-      <p>
-        Feature 2: Delete Method (Press the 'Get compliments' button and delete
-        a compliment with 'Delete Compliment' button after compliments populate.
-        Then, press 'Clear compliments' button to test other features when
-        done.)
+  
+      <p id="center">
+        ---------------------------------------------------------------------------------------
+      </p>
+  
+      <section>
+        <p>
+          Feature 2: Delete Method (Press the 'Get compliments' button and delete
+          a compliment with 'Delete Compliment' button after compliments populate.
+          Then, press 'Clear compliments' button to test other features when
+          done.)
+        </p>
+      </section>
+  
+      <p id="center">
+        ---------------------------------------------------------------------------------------
+      </p>
+  
+      <section>
+        <p>
+          Feature 3: Post Method (Enter your first name (or any name you desire)
+          and a compliment method to add the current list of compliments. Your
+          name and compliment will be posted to the DOM. Then, press 'Clear
+          compliments' button to test other features when done.)
+        </p>
+  
+        <form id="center">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="Enter your first name"
+            id="firstName"
+          />
+  
+          <input
+            type="text"
+            name="userCompliment"
+            placeholder="Enter your compliment"
+            id="userCompliment"
+          />
+  
+          <label for="userLikes" id="userLikes">Choose # of likes:</label>
+  
+          <select name="userLikes" id="userLikes">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+  
+          <button id="newComplimentButton">Submit compliment</button>
+        </form>
+      </section>
+  
+      <p id="center">
+        ---------------------------------------------------------------------------------------
+      </p>
+  
+      <section>
+        <p>
+          Feature 4: Put Method (Press the 'Get compliments' button to populate
+          the database compliments. They will populate above. Change the number of
+          likes on a compliment with the plus and minus buttons after compliments
+          populate. Then, press 'Clear compliments' button to test other features
+          when done.)
+        </p>
+      </section>
+  
+      <p id="center">
+        ---------------------------------------------------------------------------------------
       </p>
     </section>
-
-    <p id="center">
-      ---------------------------------------------------------------------------------------
-    </p>
-
-    <section>
-      <p>
-        Feature 3: Post Method (Enter your first name (or any name you desire)
-        and a compliment method to add the current list of compliments. Your
-        name and compliment will be posted to the DOM. Then, press 'Clear
-        compliments' button to test other features when done.)
-      </p>
-
-      <form id="center">
-        <input
-          type="text"
-          name="firstName"
-          placeholder="Enter your first name"
-          id="firstName"
-        />
-
-        <input
-          type="text"
-          name="userCompliment"
-          placeholder="Enter your compliment"
-          id="userCompliment"
-        />
-
-        <label for="userLikes" id="userLikes">Choose # of likes:</label>
-
-        <select name="userLikes" id="userLikes">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-
-        <button id="newComplimentButton">Submit compliment</button>
-      </form>
-    </section>
-
-    <p id="center">
-      ---------------------------------------------------------------------------------------
-    </p>
-
-    <section>
-      <p>
-        Feature 4: Put Method (Press the 'Get compliments' button to populate
-        the database compliments. They will populate above. Change the number of
-        likes on a compliment with the plus and minus buttons after compliments
-        populate. Then, press 'Clear compliments' button to test other features
-        when done.)
-      </p>
-    </section>
-
-    <p id="center">
-      ---------------------------------------------------------------------------------------
-    </p>
-
-    <section></section>
-    <section></section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
