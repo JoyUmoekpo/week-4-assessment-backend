@@ -27,3 +27,9 @@ fortuneBtn.addEventListener('click', getFortune);
 
 
 const clearBtn = document.getElementById("clear");
+
+const clearDisplay = () => {
+    complimentContainer.innerHTML = ``;
+};
+
+clearBtn.addEventListener('click', clearDisplay);
