@@ -55,6 +55,9 @@ const complimentDisplay = (results) => {
     for (let i = 0; i < results.length; i++) {
         cards += `
             <div class = "card">
+
+                <h1>Here are all compliments!</h1>
+
                 <p id = "complimentId">Compliment Id: ${results[i].id}</p>            
                 <p id = "name">Name: ${results[i].name}</p>
                 <p id = "encouragement">Encouragement: ${results[i].encouragement}</p>
@@ -63,7 +66,6 @@ const complimentDisplay = (results) => {
                 <h3>Update likes with the plus and minus below</h3>
 
                 <button onclick="updateCompliment(${results[i].id}, 'plus')" id="likes" type="plus">+</button>
-
                 <button onclick="updateCompliment(${results[i].id}, 'minus')" id="likes" type="minus">-</button>
 
                 <button onclick="deleteCompliment('${results[i].id}')">Delete Compliment</button>
@@ -73,3 +75,16 @@ const complimentDisplay = (results) => {
     }
     complimentContainer.innerHTML = cards;
 };
+
+
+
+const deleteCompliment = (id) => {
+    axios.delete(`http://localhost:4000/api/compliments/classmates/${id}`).then(res => {
+        const data = res.data;
+        complimentDisplay(data)
+    })
+    .catch(err => console.log(err))
+};
+
+
+
