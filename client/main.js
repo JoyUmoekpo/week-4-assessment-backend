@@ -58,12 +58,12 @@ const complimentDisplay = (results) => {
 
                 <h1>Here are all compliments!</h1>
 
-                <p id = "complimentId">Compliment Id: ${results[i].id}</p>            
-                <p id = "name">Name: ${results[i].name}</p>
-                <p id = "encouragement">Encouragement: ${results[i].encouragement}</p>
-                <p id = "likes">Likes: ${results[i].likes}</p>
+                <h3 id = "complimentId">Compliment Id: ${results[i].id}</h3>            
+                <h3 id = "name">Name: ${results[i].name}</h3>
+                <h3 id = "encouragement">Encouragement: ${results[i].encouragement}</h3>
+                <h3 id = "likes">Likes: ${results[i].likes}</h3>
 
-                <h3>Update likes with the plus and minus below</h3>
+                <h4>Update likes with the plus and minus below</h4>
 
                 <button onclick="updateCompliment(${results[i].id}, 'plus')" id="likes" type="plus">+</button>
                 <button onclick="updateCompliment(${results[i].id}, 'minus')" id="likes" type="minus">-</button>
@@ -88,3 +88,34 @@ const deleteCompliment = (id) => {
 
 
 
+const newComplimentBtn = document.createElement("newComplimentButton");
+const form = document.querySelector('form');
+
+const postNewCompliment = (body) => {
+    axios.post(`http://localhost:4000/api/compliments/classmates`, body)
+        .then(res => {
+            const data = res.data;
+            complimentDisplay(data)
+        })
+        .catch(err => console.log(err))
+};
+
+const submitHandler = (event) => {
+    event.preventDefault()
+
+    let name = document.querySelector('#firstName')
+    let encouragement = document.querySelector('#encouragement')
+    let likes = document.querySelector('.likes')
+
+    let newCompliment = {
+        name: name.value,
+        encouragement: encouragement.value,
+        likes: likes.value
+    }
+
+    postNewCompliment(newCompliment);
+
+    name.value = ''
+    encouragement.value = ''
+    likes.value = ''
+}
