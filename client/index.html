@@ -13,16 +13,21 @@
       button {
         background-color: #909;
         color: #fff;
-        font-size: xx-large;
+        font-size: x-large;
       }
 
       button:hover {
         background-color: #000;
       }
 
+      input {
+        color:#fff
+      }
+
     </style>
 
   </head>
+
   <body class="container">
 
     <button id="complimentButton">Get a compliment</button>
@@ -46,7 +51,33 @@
       <h2>Feature 2: Delete Method (Press the 'Get compliments' button and delete a compliment with 'Delete Compliment' button after compliments populate. Then, press 'Clear compliments' button to test other features when done.)</h2>
     </section>
     
-    <section></section>
+    <br />
+
+    <section>
+
+      <h2>
+        Feature 3: Post Method (Enter your first name (or any name you desire) and a compliment method to add the current list of compliments. Your name and compliment will be posted to the DOM.)
+      </h2>
+
+      <form>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="Enter your first name"
+          id="firstName"
+        />
+
+        <input
+          type="text"
+          name="newCompliment"
+          placeholder="Enter your compliment"
+          id="newCompliment"
+        />
+
+        <button id="newComplimentButton">Submit compliment</button>
+      </form>
+
+    </section>
     <section></section>
     <section></section>
     <section></section>
