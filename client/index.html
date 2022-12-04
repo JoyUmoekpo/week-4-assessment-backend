@@ -4,9 +4,8 @@
     <title>Back End Assessment</title>
 
     <style>
-
       * {
-        background-color: #00A36C;
+        background-color: #00a36c;
       }
 
       button {
@@ -20,26 +19,22 @@
       }
 
       input {
-        color:#fff
+        color: #fff;
       }
 
       #center {
         text-align: center;
       }
     </style>
-
   </head>
 
   <body class="container">
-
     <section id="center">
-
       <button id="complimentButton">Get a compliment</button>
 
       <button id="fortuneButton">Get a fortune</button>
-  
-      <button id="clear">Clear compliments</button>
 
+      <button id="clear">Clear compliments</button>
     </section>
 
     <h1 id="center">Try out my Features!</h1>
@@ -48,15 +43,14 @@
 
     <section>
       <h2>
-        Feature 1: Get Method (Press the 'Get compliments' button to populate database compliments. They will populate above. Press 'Clear compliments' button to test other features when done.)
+        Feature 1: Get Method (Press the 'Get compliments' button to populate
+        database compliments. They will populate above. Press 'Clear
+        compliments' button to test other features when done.)
       </h2>
 
       <section id="center">
-
         <button id="classComplimentButton">Get compliments</button>
-        
       </section>
-
     </section>
 
     <p id="center">
@@ -64,20 +58,27 @@
     </p>
 
     <section>
-      <h2>Feature 2: Delete Method (Press the 'Get compliments' button and delete a compliment with 'Delete Compliment' button after compliments populate. Then, press 'Clear compliments' button to test other features when done.)</h2>
-    </section>
-    
-    <p id="center">
-      ---------------------------------------------------------------------------------------
-    </p>
-
-    <section>
-
       <h2>
-        Feature 3: Post Method (Enter your first name (or any name you desire) and a compliment method to add the current list of compliments. Your name and compliment will be posted to the DOM.)
+        Feature 2: Delete Method (Press the 'Get compliments' button and delete
+        a compliment with 'Delete Compliment' button after compliments populate.
+        Then, press 'Clear compliments' button to test other features when
+        done.)
+      </h2>
+    </section>
+
+    <p id="center">
+      ---------------------------------------------------------------------------------------
+    </p>
+
+    <section>
+      <h2>
+        Feature 3: Post Method (Enter your first name (or any name you desire)
+        and a compliment method to add the current list of compliments. Your
+        name and compliment will be posted to the DOM.)
       </h2>
 
       <form id="center">
+        
         <input
           type="text"
           name="firstName"
@@ -92,9 +93,24 @@
           id="userCompliment"
         />
 
+        <label for="userLikes" id="userLikes">Choose # of likes</label>
+
+        <select name="userLikes" id="userLikes">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+
+        </select>
+
         <button id="newComplimentButton">Submit compliment</button>
       </form>
-
     </section>
 
     <p id="center">
@@ -104,9 +120,8 @@
     <section></section>
     <section></section>
     <section></section>
-    
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
-    
   </body>
 </html>

@@ -42,15 +42,15 @@ module.exports = {
     postNewCompliment: (req, res) => {
         let {
             name,
-            userCompliment,
-            // likes
+            encouragement,
+            likes
         } = req.body;
 
         let newCompliment = {
             id: globalId,
             name,
-            userCompliment,
-            // likes
+            encouragement,
+            likes
         }
 
         classmateCompliments.push(newCompliment);

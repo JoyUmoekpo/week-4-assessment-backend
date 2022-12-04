@@ -98,6 +98,7 @@ const postNewCompliment = (body) => {
         .then(res => {
             const data = res.data;
             complimentDisplay(data)
+            console.log(data);
         })
         .catch(err => console.log(err))
 };
@@ -106,20 +107,20 @@ const submitHandler = (event) => {
     event.preventDefault()
 
     let name = document.querySelector('#firstName')
-    let userCompliment = document.querySelector('#userCompliment')
-    // let likes = document.querySelector('.likes')
+    let encouragement = document.querySelector('#userCompliment')
+    let likes = document.querySelector('select[name="userLikes"]')
 
     let newCompliment = {
         name: name.value,
-        userCompliment: encouragement.value,
-        likes: 5
+        encouragement: encouragement.value,
+        likes: likes.value
     }
 
     postNewCompliment(newCompliment);
 
     name.value = ''
-    userCompliment.value = ''
-    likes.value = 5
+    encouragement.value = ''
+    likes.value = ''
 }
 
 form.addEventListener('submit', submitHandler)
